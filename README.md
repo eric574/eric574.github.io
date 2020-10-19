@@ -1,3 +1,5 @@
-<p align="center"><img src="https://raw.githubusercontent.com/eric574/eric574.github.io/master/assets/images/signature.png" /></p>
-<h3 align="center">Personal portfolio. Check it out!</h3>
-<h5 align="center">Changes to repository auto-deploy to live site.</h5>
+# [eric-g-liu.me](http://eric-g-liu.me/)
+
+Hey there! This is the GitHub repository for my website, which you can find at [eric-g-liu.me](http://eric-g-liu.me/)! I've written almost all of the code myself, barring Font Awesome. One of the new features that I've added is a dark mode - try it out!
+
+To be honest, I'm never super happy with how the website works, so you might see everything here change soon.

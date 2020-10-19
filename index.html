@@ -1,429 +1,715 @@
 <!DOCTYPE html>
-<!-- Trigger autobuild github pages -->
 <html lang="en">
 
 <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="description" content="Eric Liu is a 19 y/o UW CS student from Waterloo, Canada with a passion for technology, development, and research.">
-    <meta name="keywords" content="eric, liu, eric574, programming, portfolio, student, developer, Waterloo, UW, CS, competitive-programming, internship">
-    <meta name="author" content="Eric Liu">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#171717">
-    <link rel="shortcut icon" href="favicon.ico">
-    <meta name="msapplication-TileColor" content="#171717">
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <meta name="theme-color" content="#171717">
-
-    <title>Eric Liu</title>
-
-    <!-- Imports -->
-    <link rel="stylesheet" href="assets/styles/main.min.css" type="text/css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156535898-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-156535898-1');
-    </script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Eric Liu</title>
+  <meta name="description"
+    content="Eric is a computer science student at UW. He usually likes computers. He also likes education, helping people, and is probably interested in seeing how computers can help us help people. He's the second coolest Eric Liu he knows.">
+  <!-- Now, before you tell me that most of this is unnecessary, I agree with you. But, it helps with SEO, and it also makes things slightly more accessible for a small subset of users. I think it's worth the extra 500 bytes. -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#e95420">
+  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#e95420">
+  <!-- I always thought this light-dark pattern was strangely done, and there seems to be no correct answer. I opted for JS, but see https://web.dev/prefers-color-scheme/ for another way to do it. -->
+  <!-- Styling for the site - peep index.css! This used to be Liteweight, but I ended up customizing it so much that I just wrote CSS just for this website. -->
+  <link rel="stylesheet" href="index.css" />
+  <!-- This is me loading Font Awesome - I've deferred it as it's not critical to the page load, but it's still pretty cool. I've opted to use Font Awesome's SVG + JS features instead of webfonts, just to see how it is! -->
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/solid.js"
+    integrity="sha384-IA6YnujJIO+z1m4NKyAGvZ9Wmxrd4Px8WFqhFcgRmwLaJaiwijYgApVpo1MV8p77" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/brands.js"
+    integrity="sha384-rUOIFHM3HXni/WG5pzDhA1e2Js5nn4bWudTYujHbbI9ztBIxK54CL4ZNZWwcBQeD" crossorigin="anonymous">
+  </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/fontawesome.js"
+    integrity="sha384-EMmnH+Njn8umuoSMZ3Ae3bC9hDknHKOWL2e9WJD/cN6XLeAN7tr5ZQ0Hx5HDHtkS" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
-    <!-- Header/landing section -->
-    <div id="header">
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="dark mode toggle button">
+    <span class="fa fa-fw fa-cloud-sun"></span>
+  </button>
+  <section class="section-fh d-flex">
+    <div class="content-container v-center-parent">
+      <div class="row row-1-2">
+        <div class="col v-center-children">
+          <div class="img-silhouette rounded">
+            <img class="block-responsive rounded img-silhouette-shift" src="img/eric.png"
+              alt="Eric's profile pic" />
+          </div>
+        </div>
+        <div class="col v-center-children">
+          <div>
+            <p class="text-2x font-nexa">
+              <span class="handwave">👋</span>
+              Hey there!
+              <span class="handwave handwave-delayed">👋</span>
+            </p>
+            <h1 class="hero-title font-nexa">
+              My name is <span class="underline-expand">Eric Liu</span>
+            </h1>
+            <p>
+              Glad you're here. 😉
+              <br>
+              While you're here, try out dark mode!
+            </p>
+            <p class="text-15x font-nexa">
+              I like computers.
+              <br />
+              I love helping people.
+              <br />
+              I'd love to use computers to empower people.
+            </p>
+            <p>
+              Currently: CS @ UWaterloo,
+              <br>
+              <a class="link-em tla-link" href="https://moralyzer.com/" rel="noopener noreferrer" target="_blank">
+                SWE @ Moralyzer ✊
+              </a>
+              <br>
+            </p>
+            <p>
+              <a class="link-em tla-link" href="https://wish.com/" rel="noopener noreferrer" target="_blank">
+                Previously @ Wish 🛒
+              </a>
+            <div>
+              Contact me:<br>
+              <a class="button" rel="noopener noreferrer" target="_blank" href="https://github.com/eric574/">
+                <span class="fab fa-github"></span> GitHub
+              </a>
+              <a class="button" rel="noopener noreferrer" target="_blank" href="files/resume.pdf">
+                <span class="fa fa-file-alt"></span> Résumé
+              </a>
+              <a class="button" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/eric-g-liu/">
+                <span class="fab fa-linkedin"></span> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container">
+      <div class="row row-2-1">
+        <div class="col">
+          <h2 class="font-nexa">A bit more about Eric</h2>
+          <p>
+            I'm in my second year at UWaterloo, majoring in the art of computer science! I'm particularly interested in the intersection between computer science, social justice,
+            and entrepreneurship.
+          </p>
+          <p>
+            I enjoy working with computers: websites, apps, back-ends, servers, embedded systems, distributed systems, big data, machine
+            learning, you name it! I am particularly passionate about open-source software.
+          </p>
+          <p>
+            Recently, I've finished my internship at Wish in San Francisco and I am currently on the lookout for Winter 2021 SWE internships. You can find me lurking open source issues posted on Github, researching, doing competitive-programming, or at your nearest hackathon!
+          </p>
+          <p>
+            In my spare time, I like to solve puzzles 💻 , weight-lift 💪 , and read 📚 .
+          </p>
+          <p>
+            And be inspired by quotes. 💬
+          </p>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h3>Quotes</h3>
+            <p>
+              <button class="button" onclick="randomNiceQuote()">
+                <span class="fa fa-redo"></span>
+                Inspire me
+              </button>
+            </p>
+            <div id="nice-quote">
+
+            </div>
+            <p>
+              Need more inspiration?
+              <br>
+              Follow my IG page
+              <a rel="noopener noreferrer" href="https://www.instagram.com/dayonesclub/" target="_blank">@dayonesclub</a> 😊
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container">
+      <div class="row row-2-1">
+        <div class="col">
+          <h2 class="font-nexa">Experience &amp; Work</h2>
+          <p>
+            I occasionally do things, usually with computers. Here are the big ones.
+          </p>
+          <hr />
+          <br />
+          <h3 class="font-nexa" id="aws">SDET at Wish (2020)
+            <a rel="noopener noreferrer" target="_blank" href="https://wish.com/" aria-label="Wish Website">
+              <span class="fa fa-link"></span>
+            </a>
+          </h3>
+          <p>
+            Wish Marketplace + Logistics team in San Francisco, California!
+          </p>
+          <p>
+            <a id="aws-link" role="button">click for more detail</a>
+          </p>
+          <div class="toggle-content" id="aws-content">
+            <p>
+              While I can't tell you <i>everything</i> I did at Wish, here's a general overview of what my role was:
+            </p>
+            <ul>
+              <li>
+                Automated <b>50%</b> of daily <b>API</b>, <b>Web</b>, and <b>iOS</b> test suites with <b>Python</b> (Selenium), <b>JavaScript</b>, and <b>Swift</b> (XCTest)
+              </li>
+              <li>
+                Migrated functional tests into automated <b>CI/CD pipeline</b> using <b>Docker</b> and <b>GitLab</b> to save <b>93%</b> of daily developer testing time (From 1-2 hrs to 5 mins on average)
+              </li>
+              <li>
+                Refactored production-side code for Buyer Risk Management team using <b>Python</b> and <b>MongoDB</b>
+              </li>
+              <li>
+                Proposed a new pattern matching algorithm for fraud merchant transaction detection, saving <b>$2 million USD in GMV</b> annually
+              </li>
+              <li>
+                Ideated a new admin dashboard panel feature to control threshold levels for fraud detection in real-time
+              </li>
+              <!--
+              <li>
+                Implemented automated data pipeline to ingest, filter, and upload 10k metrics/5 min (Java, AWS: SNS, SQS, Lambda, DynamoDB, CloudWatch, CloudFormation)
+              </li>
+              -->
+            </ul>
+          </div>
+          <h3 class="font-nexa" id="booz">SWE at Moralyzer (2020)
+            <a rel="noopener noreferrer" target="_blank" href="https://moralyzer.com/" aria-label="Moralyzer Website">
+              <span class="fa fa-link"></span>
+            </a>
+          </h3>
+          <p>
+            Software Engineer at Moralyzer, a social media platform designed to fight social injustices across the world.
+          </p>
+          <p>
+            <a id="booz-link" role="button">click for more detail</a>
+          </p>
+          <div class="toggle-content" id="booz-content">
+            <p>
+              As the sole software developer of the team, I performed several key responsibilities:
+            </p>
+            <ul>
+              <li>
+                Developed <b>RNN + LSTM</b> models to filter out offensive and irrelevant comments using <b>Keras</b>, <b>TensorFlow</b>, <b>CuDNNGRU</b>, and <b>Word2Vec</b>
+              </li>
+              <li>
+                Built a <b>tokenization system</b> for login and other <b>API</b> integrations using <b>Ruby on Rails</b> and <b>React.js</b>
+              </li>
+              <li>
+                Architected an <b>ETL pipeline</b> to ingest, filter, and upload user comments and posts
+              </li>
+              
+            </ul>
+            <br />
+          </div>
+          <h3 class="font-nexa" id="audionotch">Director of Technology at WeBuild (2020)
+            <a rel="noopener noreferrer" target="_blank" href="http://explorewebuild.com/" aria-label="WeBuild Website">
+              <span class="fa fa-link"></span>
+            </a>
+          </h3>
+          <p>
+            WeBuild is a digital agency that builds apps for clients to fulfill their businesses' digital needs.
+          </p>
+          <p>
+            <a id="audionotch-link" role="button">click for more detail</a>
+          </p>
+          <div class="toggle-content" id="audionotch-content">
+            <p>Worked in a startup-like environment with CEO and CTO:</p>
+            <ul>
+              <li>
+                Built the company's robust website and oversaw the <b>architecture</b> and <b>design</b> of <b>full-stack</b> applications using <b>MERN</b> stack and <b>cloud deployment</b> services
+              </li>
+              <li>
+                Worked closely with clients to gather imperative <b>design approval</b> and ensure systems designed are <b>scalable</b>, <b>reusable</b>, and <b>service-oriented</b>
+              </li>
+              <li>
+                Increased company growth by <b>52%</b> for clients via <b>SEO</b>, <b>copywriting</b>, and <b>API integrations</b>
+              </li>
+            </ul>
+            <br />
+          </div>
+          <h3 class="font-nexa" id="tla">
+            SWE (Backend) at Synapse Data Solutions (2018-2019)
+            <a rel="noopener noreferrer" target="_blank" href="https://synapsedata.ca/" aria-label="Synapse Data Solutions Website">
+              <span class="fa fa-link"></span>
+            </a>
+          </h3>
+          <p>
+            <a class="link-em tla-link" href="https://synapsedata.ca/" rel="noopener noreferrer" target="_blank">
+              Synapse Data Solutions
+            </a>
+            is a new innovative data center, located in North America’s prime location for data communication. The sole initiative is to cater to the critical IT infrastructure needs present within global businesses.
+          </p>
+          <p>
+            <a id="link-em tla-link" role="button">click for more detail</a>
+          </p>
+          <div class="toggle-content" id="tla-content">
+            <p>
+              I worked as a Software Engineer specializing in Backend:
+            </p>
+            <ul>
+              <li>
+                Wrote <b>Python web-scraping</b> scripts to increase database entries by <b>32%</b>
+              </li>
+              <li>
+                Documented all methodologies in <b>Linux</b> and <b>Bash</b> environments
+              </li>
+              <li>
+                Performed <b>data cleansing and mining</b> on database entries with <b>Python</b>, <b>SQL</b>, and <b>PHP</b>, reducing lookup times by <b>38%</b> and false positive matches by <b>61%</b>
+              </li>
+              <li>
+                Clients included <b>IBM</b>, <b>Tencent</b>, <b>Alibaba</b>, <b>Rogers</b>, <b>Dell</b>, <b>Cisco</b>, and many more
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <br />
+          <h3 class="font-nexa">
+            Smaller experiences & Work
+          </h3>
+          <p>
+              <a id="small-projects-link" role="button">
+                (click to expand. but only if you want to!)
+              </a>
+          </p>
+          <div class="toggle-content" id="small-projects-content">
+            <ul>
+              <li>
+                I volunteer for <a rel="noopener noreferrer" target="_blank" href="https://volunteers.ynalliance.ca/">YNA</a>, a Youth Nation Alliance association in Toronto. I also set up their website as a Full-Stack web developer!
+              </li>
+              <li>
+                Before COVID, I joined many clubs at the University of Waterloo including: UW Computer Science club, UW Data Science club, <a rel="noopener noreferrer" target="_blank" href="https://www.uwfinance.ca/">UW Finance Association</a>, Coffee 'N Code club, and Waterloop (for SpaceX's Hyperloop competition!)
+              </li>
+              <li>
+                I have attended 7+ hackathons to-date across North-America and have yet to win one. Hoping to win one at <a rel="noopener noreferrer" target="_blank" href="https://hackthenorth.com/">Hack the North</a> - Canada's biggest hackathon!
+              </li>
+              <li>
+                I regularly compete in a series of AI games for data scientists called <a rel="noopener noreferrer" target="_blank" href="https://terminal.c1games.com/">Terminal Games</a> hosted by Correlation One. I have gotten 1st place in Canada back in Season 5 earlier in 2020!
+              </li>
+              <li>
+                I served as the President of my high school's Computer Science and STEM clubs from 2018-2019! Most memorable moments were leading my team to strong place finishes at various computing competitions at regional and provincial levels.
+              </li>
+              <li>
+                I served as the lead programmer at my high school's Robotics club from 2016-2019. My tasks included automonous + driver programming in C, designing & building the robot, and overseeing my team's work. Our proudest moment was qualifying for the VEX Robotics Provincials Competition (we were 1 step away from World Finals).
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <p>
+            If you want to see contributions I make to open-source or fragments of software projects, you can check out
+            <a rel="noopener noreferrer" target="_blank" href="https://github.com/eric574">my GitHub profile.</a>
+          </p>
+          <p>
+            I also like to participte in as many hackathons as I possibly can. You can check out my hackathon portfolio <a rel="noopener noreferrer" target="_blank" href="https://devpost.com/eric574">on DevPost.</a>
+          </p>
+        </div>
+        <div class="col">
+          <div class="sticky-helper">
+            <div class="card">
+              <p>
+                Want a more formal breakdown? These might help:
+              </p>
+
+              <a class="button button-block" rel="noopener noreferrer" target="_blank" href="files/resume.pdf">
+                <span class="fa fa-file-alt"></span> Résumé
+              </a>
+              <a class="button button-block" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/eric-g-liu/">
+                <span class="fab fa-linkedin"></span> LinkedIn
+              </a>
+              <a class="button button-block" rel="noopener noreferrer" target="_blank" href="https://github.com/eric574/">
+                <span class="fab fa-github"></span> GitHub
+              </a>
+              <p>
+                Not enough, or have more questions? Shoot me an email at <a href="mailto:ericliu574@gmail.com">ericliu574@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container content-tight">
+      <div class="text-center">
+        <h2 class="title font-nexa">Things that I am sometimes good at</h2>
+        <p>
+          It turns out, these tend to involve computers.
+        </p>
+      </div>
+      <div class="card card-full">
+        <h3 class="font-nexa">Software Engineering</h3>
+        <p>
+          Relevant skills:
+        </p>
+        <ul>
+          <li>Strongest Languages: Javascript, Python, C, C++, Java</li>
+          <li>Theory: Data Structures, Algorithms, Object-Oriented Programming, Functional Programming, Operating Systems, Programming Languages, Embedded Systems, Logic &amp; Computation, Foundations of Sequential Programs</li>
+          <li>Cool Languages: Ruby, Swift, PHP, Go, Rust, OCaml</li>
+          <li>CI &amp; CD (Travis, Gitlab)</li>
+          <li>I'm a Git &amp; GitHub fanatic, and I <span class="fa fa-heart animated-heartbeat" style="color:red;"></span> open-source software!</li>
+        </ul>
+      </div>
+      <div class="card card-full">
+        <h3 class="font-nexa">Full-stack Development</h3>
+        <p>
+          Relevant skills:
+        </p>
+        <ul>
+          <li>10,000+ sloc of Javascript/Typescript!</li>
+          <li>Front-end Javascript: React + Redux, Angular, Vue, jQuery</li>
+          <li>Web App Frameworks: Express, Django, Flask</li>
+          <li>Databases: SQL, PostgreSQL, Firebase, MongoDB</li>
+          <li>Backend Languages: Javascript, Python, PHP, Java, Go, C, C++</li>
+          <li>App Development: Native Swift, React Native, Electron</li>
+          <li>DevOps: Webservers (Nginx, Apache), Docker, AWS, Google Cloud</li>
+          <li>Misc: Node, Jekyll, HTML + CSS, SASS, Typescript</li>
+        </ul>
+      </div>
+      <div class="card card-full">
+        <h3 class="font-nexa">Education, outreach, and teaching</h3>
+        <p>
+          Past experience:
+        </p>
+        <ul>
+          <li>
+            Served as the President of my high school's Computer Science club with 55+ members in total for 2 years
+          </li>
+          <li>
+            Designed and taught intermediate to advanced algorithms and data structures courses to high school students. Covered topics such as Graph Theory, Divide and Conquer, Dynamic Programming, Recursion, Greedy, etc.
+          </li>
+          <li>
+            Organized many contest programming competitions for students in my high school's Computer Science club
+          </li>
+          <li>
+            Led my high school team to a strong finish in the ECOO-CS Programming Contest's provincial finals in 2017-2018.
+          </li>
+          <li>
+            Served as the President of my high school's STEM club with 40+ members in total for 2 years
+          </li>
+          <li>
+            Organized weekly activities ranging from science experiments designed to pique student interest to lectures in Physics, Chemistry, and Biology
+          </li>
+          <li>
+            Self-studied for AP Calculus BC
+          </li>
+          <li>
+            Self-studied for AP Chemistry
+          </li>
+          <li>
+            Self-studied for AP Physics 1 & 2
+          </li>
+          <li>
+            Coursera Certification in Algorithms, Part I from Princeton University
+          </li>
+          <li>
+            Coursera Certification in Financial Markets from Yale University
+          </li>
+          <li>
+            Coursera Certification in Machine Learning from Stanford University
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container content-tight">
+      <div class="text-center">
+        <h2 class="title font-nexa">Other cool things about me</h2>
+        <p>(Congrats, you've made it here!)</p>
+      </div>
+      <div class="card border-primary">
+        <h3 class="font-nexa">Education</h3>
+        <p>
+          I'm currently a second year at the University of Waterloo, majoring in Computer Science (BCS.); my expected graduation date is April 2024.
+        </p>
+        <p>
+          I am highly interested in Distributed Systems, Fintech, Big Data, and Full-Stack Development.
+        </p>
+        <p>
+          When I am not coding, doing assignments, or studying for exams, you can find me lifting weights and playing basketball.
+        </p>
+        <p>
+          Prior to UW, I grew up and went to high school in Markham, Canada. I did competitive programming and dabbled in STEM and robotics.
+        </p>
+      </div>
+      <div class="card border-primary">
+        <h3 class="font-nexa">Achievements</h3>
+        <p>
+          I had fun, which is what matters.
+        </p>
+        <ul class="list-items">
+           <li>98th percentile in Facebook Hacker Cup Qualifying Round (2020)</li>
+          <li>97th percentile in Google Code Jam Qualifying Round (2020)</li>
+          <li>1st place in Canada for Terminal Games hosted by Correlation One (2020)</li>
+           <li>Top 3% worldwide in July on LeetCode (2020)</li>
+          <li>UW Computer Science Dean's Honours List (2019-2020)</li>
+          <li>UW President's Scholarship of Distinction (2018-2022)</li>
+          <li>UW Retirees' Scholarship of Distinction (2018-2022)</li>
+          <li></li>
+          <li>Top 6% in Canada for UW senior math contests (2017-2019)</li>
+          <li>95th percentile in Google Code Jam Qualifying Round (2019)</li>
+          <li>4th place across 75 teams in ECOO-CS Programming Contest (2018-2019)</li>
+          <li>Top 20% in USACO Platinum Division (2019)</li>
+          <li>Perfect Score on USACO Gold Division (2018)</li>
+          <li>Perfect Score on USACO Silver Division (2018)</li>
+          <li>Perfect Score on USACO Bronze Division (2018)</li>
+          <li>80th percentile in Facebook Hacker Cup Qualifying Round (2018)</li>
+          <li>HOSA Provincials Finalist in HOSA Bowl Category (2018) </li>
+          <li>DECA Provincials Finalist in the Personal Business Management category (2017)</li>
+          <li><a rel="noopener noreferrer" target="_blank" class="link-white"
+            href="https://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year)">TIME Magazine's Person of the Year in
+            2006</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container content-tight">
+      <div class="row row-2">
         <div>
-            <h1><strong>
-                <span class="animated fadeIn" data-wow-delay="0.1s">W</span><span class="animated fadeIn" data-wow-delay="0.15s">E</span><span class="animated fadeIn" data-wow-delay="0.2s">L</span><span class="animated fadeIn" data-wow-delay="0.25s">C</span><span class="animated fadeIn" data-wow-delay="0.3s">O</span><span class="animated fadeIn" data-wow-delay="0.4s">M</span><span class="animated fadeIn" data-wow-delay="0.45s">E</span>
-            </strong></h1>
-            <div class="title">
-                <h2>Eric Liu</h2>
-                <h5>STUDENT DEVELOPER | ASPIRING ENTREPRENEUR | PROBLEM-SOLVER | LEADER | INNOVATOR</h5>
-                <p>Have a cool idea and want help?</br><a href="#fixedFooter">Let's grab a coffee</a>.</p>
-                <div>
-                    <ul>
-                        <li><a href="#about">ABOUT ME &mdash;</a></li>
-                        <li><a href="#accolades">AWARDS &mdash;</a></li>
-                        <!-- <li><a href="#experiences">EXPERIENCES &mdash;</a></li> -->
-                        <!-- <li><a href="#accolades">PROJECTS &mdash;</a></li> -->
-                        <!-- <li><a href="#footer">PORTFOLIO &mdash;</a></li> -->
-                        <!-- <li><a href="assets/documents/Eric_Liu_Resume.pdf" target="_blank" rel="noopener">RESUME &mdash;</a></li> -->
-                        <li><a href="#fixedFooter">GET IN TOUCH &mdash;</a></li>
-                    </ul>
-                </div>
-            </div>
+          <h2 class="font-nexa">Say hi! <span class="handwave">👋</span></h2>
+          <p>
+            I won't byte, I promise.
+          </p>
         </div>
+        <ul class="list-unstyled list-items text-15x font-nexa">
+          <li>
+            <a class="link-em" rel="noopener noreferrer" target="_blank" href="mailto:ericliu574@gmail.com"><span class="fa fa-envelope"></span> Email:
+              ericliu574@gmail.com</a>
+          </li>
+          <li>
+            <a class="link-em" rel="noopener noreferrer" target="_blank" href="https://github.com/eric574"><span class="fab fa-github"></span> GitHub: eric574</a>
+          </li>
+          <li>
+            <a class="link-em" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/eric-g-liu/"><span class="fab fa-linkedin"></span>
+              LinkedIn: Eric Liu</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- About section -->
-    <div id="about">
-        <div id="aboutCTA">
-            <div>
-                <div>
-                    <img src="assets/images/me.png" alt="Eric smiling at camera."/>
-                    <img src="assets/images/me-rotation.png" class="gear" alt="Gear that rotates around Eric's image."/>
-                </div>
-            </div>
-            <div>
-                <h3>Work hard,
-                    <a href="#accolades">code</a> harder.</h3>
-                <p>My name is
-                    <span class="highlightColor">Eric Liu</span>, and I'm a 2nd-year <span class="highlightColor">Computer Science</span> student from the <span class="highlightColor">University of Waterloo</span> who likes to build software. I've always
-                    <span class="highlightColor">loved technology</span>, and have been typing away on a keyboard from before I could
-                    write with a pencil (<a href="https://data.typeracer.com/pit/profile?user=eric__574" target="_blank" rel="noopener">Seriously, I love typing</a>).</p>
-                <p>Recently, I've finished my internship at
-                    <span class="highlightColor">Wish</span> in San Francisco and I am currently on the lookout for Winter 2021 SWE internships. I am highly interested in <span class="highlightColor">Distributed Systems</span>, <span class="highlightColor">Big Data</span>, and <span class="highlightColor">Full-Stack Development</span>. You can find me lurking
-                    <span class="highlightColor">open source issues</span> posted on Github, researching, doing competitive-programming, or at your nearest hackathon!</p>
-                <p>Let's get in touch!</p>
-                <img src="assets/images/signature.png" style="width: 13%; " alt="Eric's signature."/>
-            </div>
-        </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="content-container">
+      <footer class="text-center">
+        <div class="text-2x font-nexa"><b>Made by Eric Liu</b></div>
+        <br>
+        <span class="fa fa-heart text-primary animated-heartbeat"></span>
+        <a rel="noopener noreferrer" href="https://github.com/eric574/eric574.github.io" aria-label="GitHub Repository"><span class="fab fa-github text-black"></span></a>
+        <span class="fa fa-heart text-primary animated-heartbeat"></span>
+      </footer>
     </div>
-
-    <!-- Accolades section -->
-    <div id="accolades">
-        <h3>AWARDS</h3>
-        <div class="scroller">
-            <a href="https://terminal.c1games.com/leaderboard" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">Terminal Games</h4>
-                        <p>1st Place in Canada</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/c1.png" id="consensys" alt="Correlation One logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://codingcompetitions.withgoogle.com/codejam/archive/2020" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">Google Code Jam</h4>
-                        <p>97th Percentile in QR</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/google.png" id="nybw" alt="Google logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2020" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">FB Hacker Cup</h4>
-                        <p>98th Percentile in QR</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/fb.png" id="googlecodein" alt="Facebook Hacker Cup."/>
-                    </div>
-                </div>
-            </a>
-            <a href="http://usaco.org/current/data/jan19_platinum_results.html" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">USACO Platinum</h4>
-                        <p>Top 20% Worldwide</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/usaco.png" id="apple" alt="USACO logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://leetcode.com/contest/weekly-contest-147/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">LeetCode July 2019</h4>
-                        <p>Top 3% Worldwide</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/leetcode.png" id="nybw" alt="LeetCode logo."/>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <p id="scrollText">
-            <span class="highlightColor">&larr;</span> Drag left or right to see more!
-            <span class="highlightColor">&rarr;</span>
-        </p>
-    </div>
-
-    <!-- Quote #1 -->
-    <div id="footer" style="background-color: #1d1d1d;">
-        <div id="cta">
-            <p style="font-size: 30px;"><span class="highlightColor">My Favourite Quote:</span></p>
-            <p>"Only those who risk going too far can possibly find out how far one can go."<br><span class="highlightColor">- T.S. Eliot</span></p>
-        </div>
-    </div>
-
-    <!-- Experiences section -->
-    <div id="accolades">
-        <h3>EXPERIENCES</h3>
-        <div class="scroller">
-            <a href="https://moralyzer.com/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">SWE @Moralyzer</h4>
-                        <p>July 2020 - Present</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/moralyzer.png" id="moralyzer" alt="Moralyzer logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://www.wish.com/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4>SDET @Wish</h4>
-                        <p>May 2020 - Aug 2020</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/wish.png" id="wish" alt="Wish logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="explorewebuild.github.io" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4>SWE @WeBuild</h4>
-                        <p>April 2020 - Present</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/webuild.png" id="webuild" alt="WeBuild logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://www.uwfinance.ca/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">SWE @UW Finance</h4>
-                        <p>Jan. 2020 - April 2020</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/uwfinance.png" id="uwfinance" alt="UW Finance logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="http://synapsedata.ca/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4>SWE @Synapse</h4>
-                        <p>Dec. 2018 - June 2019</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/synapse.png" id="yna" alt="YNA logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://www.ynalliance.ca/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">Full Stack @YNA</h4>
-                        <p>July 2018 - June 2019</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/yna.png" id="yna" alt="YNA logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="http://www.yenyr.com/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">Full Stack @YENYR</h4>
-                        <p>July 2018 - June 2019</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/yenyr.png" id="yenyr" alt="YENYR logo."/>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <p id="scrollText">
-            <span class="highlightColor">&larr;</span> Drag left or right to see more!
-            <span class="highlightColor">&rarr;</span>
-        </p>
-    </div>
-
-    <!-- Projects section -->
-    <!--
-    <div id="accolades">
-        <h3>PROJECTS</h3>
-        <div class="scroller">
-            <a href="https://github.com/eric574/BlockGoods" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4>BlockGoods</h4>
-                        <p>MERN tech stack</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/blockgoods.svg" id="blockgoods" alt="BlockGoods logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://codingcompetitions.withgoogle.com/codejam/archive/2020" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">Google Code Jam</h4>
-                        <p>97th Percentile in QR</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/google.png" id="nybw" alt="Google logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2020" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">Facebook Hacker Cup</h4>
-                        <p>98th Percentile in QR</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/fb.png" id="googlecodein" alt="Facebook Hacker Cup."/>
-                    </div>
-                </div>
-            </a>
-            <a href="http://usaco.org/current/data/jan19_platinum_results.html" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">USACO Platinum</h4>
-                        <p>Top 20% Worlwide</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/usaco.png" id="apple" alt="USACO logo."/>
-                    </div>
-                </div>
-            </a>
-            <a href="https://leetcode.com/contest/weekly-contest-147/" target="_blank" rel="noopener">
-                <div class="accoladeItem">
-                    <div>
-                        <h4 class="longAccoladeTitle">LeetCode July 2019</h4>
-                        <p>Top 3% Worldwide</p>
-                    </div>
-                    <div>
-                        <img src="assets/images/leetcode.png" id="nybw" alt="LeetCode logo."/>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <p id="scrollText">
-            <span class="highlightColor">&larr;</span> Drag left or right to see more!
-            <span class="highlightColor">&rarr;</span>
-        </p>
-    </div>
-    -->
-
-    <!-- Universal footer -->
-    <div id="footer">
-        <div id="subfooter">
-            <div id="cta">
-                <p>I'm always on the lookout for interesting opportunities.
-                    <!-- <a href="assets/documents/Eric_Liu_Resume.pdf" target="_blank" rel="noopener">
-                        <strong>Here is my resume</strong></a> --> I look forward to getting in touch! </p>
-                <a href="mailto:e48liu@uwaterloo.ca" class="highlight">e48liu@uwaterloo.ca</a>
-            </div>
-            <div id="linkFocus">
-                <a class="link wow fadeIn" data-wow-delay="0.1s" id="github" href="https://github.com/eric574" target="_blank" rel="noopener">
-                    <article>
-                        <h4>Github</h4>
-                        <p>cool code commits</p>
-                        <img src="assets/images/github.svg" alt="Github Logo."/>
-                    </article>
-                    <div>
-
-                    </div>
-                </a>
-                <a class="link wow fadeIn" data-wow-delay="0.3s" id="devpost" href="https://devpost.com/eric574" target="_blank" rel="noopener">
-                    <article>
-                        <h4>Devpost</h4>
-                        <p>hackathon accolades</p>
-                        <img src="assets/images/devpost.svg" alt="Devpost Logo."/>
-                    </article>
-                    <div>
-
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+  </section>
+  <script>
+    "use strict";
     
-    <!-- Universal sub-footer -->
-    <div class="fullwidth">
-        <div id="fixedFooter">
-            <div class="col-6">
-                <h4>Give me a summary —</h4>
-                <p>Hey there! My name is Eric Liu, and I'm a
-                    <span class="highlightColor">student developer</span> and a <span class="highlightColor">2nd-year UW CS student.</span></p>
-                <p>Previously, I've interned at <span class="highlightColor">Wish</span> and I'm fascinated by <span class="highlightColor">Distributed Systems</span>, <span class="highlightColor">Big Data</span>, and <span class="highlightColor">Full-Stack Development</span>.</p>
-                <p>I've always had a
-                    <span class="highlightColor">passion</span> for technology and can be found exploring
-                    <span class="highlightColor">open-source</span> projects, weight-lifting, and problem-solving.</p>
-                <p>I'm actively on the lookout for Winter 2021 internships in development and research, so
-                    <span class="highlightColor">get in touch!</span>
-                </p>
-            </div>
-            <div class="col-3">
-                <h4 style="margin-bottom: 10px;">Show me more —</h4>
-                <!-- <a href="assets/documents/Eric_Liu_Resume.pdf" target="_blank" rel="noopener">Resume
-                    <span class="nohighlight">(77 kb)</span>
-                </a> -->
-                <a href="https://github.com/eric574/BlockGoods" target="_blank" rel="noopener">BlockGoods
-                    <span class='nohighlight'>(source)</span>
-                </a>
-                <a href="https://github.com/eric574/DevSpace" target="_blank" rel="noopener">DevSpace
-                    <span class='nohighlight'>(source)</span>
-                </a>
-                <a href="https://github.com/eric574/ImgCleaner" target="_blank" rel="noopener">ImgCleaner
-                    <span class="nohighlight">(source)</span>
-                </a>
-                <a href="https://github.com/eric574/PropertyFinder" target="_blank" rel="noopener">PropertyFinder
-                    <span class="nohighlight">(iOS app)</span>
-                </a>
-                <a href="https://github.com/eric574/Videofy" target="_blank" rel="noopener">Videofy
-                    <span class="nohighlight">(source)</span>
-                </a>
-                <a href="https://github.com/eric574/Competitive-Programming-Solutions" target="_blank" rel="noopener">Coding Contests
-                    <span class="nohighlight">(source)</span>
-                </a>
-            </div>
-            <div class="col-3">
-                <h4>Reach out —</h4>
-                <h5>Internship opportunities</h5>
-                <a class="reach-link" href="mailto:e48liu@uwaterloo.ca" style="margin-bottom: 10px;">e48liu@uwaterloo.ca</a>
-                <br>
-                <a class="reach-link" href="https://www.linkedin.com/in/eric-g-liu/">linked.com/in/eric-g-liu</a>
-                <h5 style="margin-top: 40px;">Other inquiries —</h5>
-                <a class="reach-link" href="mailto:ericliu574@gmail.com" style="margin-bottom: 10px;">ericliu574@gmail.com</a>
-                <br>
-                <a class="reach-link" href="tel:6476696949">(+1) 647-669-6949</a>
-            </div>
-        </div>
-    </div>
-    <!-- Copy information -->
-    <div id="lowestFooter">
-        <h4>Made with ❤️  + ☕ in Waterloo</h4>
-        <p>Developed by Eric Liu © 2020.</p>
-        <p>Personal Portfolio</p>
-        <p><span class="highlightColor">"The master has failed more times than the beginner has even tried."</span></p>
-    </div>
+    function colorLog(message){
+      console.log(`%c${message}`,"color:#e95420;");
+    }
+    colorLog("This page runs very minimal Javascript (just content-collapse, nice-quotes that change on page refresh, and Font Awesome), so don't fret.");
+    colorLog("Anyways, have fun browsing the rest of the website. If you have any feedback, let me know on my GitHub repo for this landing page: \nhttps://github.com/eric574/eric574.github.io");
 
-    <!-- Script imports + custom in-file. -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        $(".scroller").owlCarousel({ items: 3, itemsDesktop: [881, 3], itemsTablet: [880, 2], itemsTabletSmall: [590, 1], autoPlay:
-        false, responsive: true, navigation: false, }); $(document).on('click', 'a[href^="#"]', function (event) { event.preventDefault();
-        $('html, body').animate({ scrollTop: $($.attr(this, 'href')).offset().top }, 800); }); $(window).scroll(function () { var
-        y = $(this).scrollTop(), speed = 0.3, spin = (y * speed), $spinner = $('.gear'); $spinner.css({ '-webkit-transform': 'rotate('
-        + spin + 'deg)', '-moz-transform': 'rotate(' + spin + 'deg)', '-o-transform': 'rotate(' + spin + 'deg)', 'transform': 'rotate('
-        + spin + 'deg)' }); });
-        new WOW().init();
-    </script>
+    // Here's my list of nice, motivational quotes so far. ;)
+    const niceQuotes = [
+      'Only those who risk going too far can possibly find out how far one can go.',
+      'The master has failed more times than the beginner has even tried.',
+      'Meet me at the top. The bottom was way too crowded.',
+      'Day One over One Day.',
+      'It\'s always Day One.',
+      'Focus on you until the focus is on you.',
+      'If you try and fail, congratulations! Most people don\'t even try.',
+      'Start from nothing. Stop for nothing.',
+      'Take the risk, or lose the chance.',
+      'Don\'t call it a dream. Call it a plan.',
+      'Giving up is the greatest failure.',
+      'You get in life what you have the courage to ask for.',
+      'Wake up everyday to live your life to its fullest.',
+      'You will never have what you want if you never start.',
+      'You are one decision away from a totally different life.',
+      'The comeback is always stronger than the setback.',
+      'The faster you fail, the faster you learn.',
+      'Risk is a price you pay for opportunity.',
+      'Let your struggles be the fuel to your success.',
+      'Be the game changer.',
+      'Focus on your aim and blur everything else.',
+      'Be patient, great things take time.',
+      'Quitters never win and winners never quit.',
+      '0% luck, 100% hustle.',
+      'There is no better tomorrow, if you don\'t make the best of today.',
+      'A winner is just a loser who tried one more time.',
+      'Trust the process.',
+      'If you believe it, you can do it.',
+      'Don\'t forget the lifestyle you have promised to yourself.',
+      'Don\'t let your dreams just be dreams.',
+      'Work in silence. Let success make the noise.',
+      'Don\'t stop until you\'re proud.',
+      'Never give up. Life can go from 0 to 100 real quick.',
+      'Believe in hard work not in luck.',
+      'You start succeeding as soon as you run out of excuses.',
+      'Be a self motivator because no one else is going to push you.',
+      'It\'s you vs you. Make sure you win.',
+      'Start unknown. Finish unforgettable.',
+      'Work for it more than you hope for it.',
+      'You can make progress or you can make excuses.',
+      'When I lost my excuses, I found my results.',
+      'Only you and you alone can change your situation.',
+      'Whatever you do, do it 100%.',
+      'Without self discipline, success is impossible period.',
+      'Hard work puts you where good luck can find you.',
+      'I can do anything I set my mind to.',
+      'Some people easily give up. Don\'t be some people.',
+      'Sit with winners. The conversation is different.',
+      'Becoming great begins with an even greater attitude.',
+      'I was there for myself when no one else was.',
+    ]
+
+    // This randomly "shuffles" the niceQuotes array - this is so the "order" of the niceQuotes is different on every visit!
+    for (let i = niceQuotes.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [niceQuotes[i], niceQuotes[j]] = [niceQuotes[j], niceQuotes[i]];
+    }
+
+    // To ensure that you don't get the same niceQuote twice in a row, we iterate through the random array so that you see each niceQuote at least once before you see one twice.
+    let counter = 0;
+
+    function randomNiceQuote() {
+      document.getElementById('nice-quote').innerHTML = '<p class="nice-quote">' + "\"" + niceQuotes[counter] + "\"" + 
+        '</p>' // I do this instead of directly changing the paragraph's innerHTML so the transition replays when the <p> is created
+      // here we just increment counter, and reset it to zero - creating an "infinite loop" through the array
+      if (counter + 1 == niceQuotes.length) {
+        counter = 0;
+      } else {
+        counter += 1;
+      }
+    }
+    randomNiceQuote()
+
+    // Light Mode & Dark Mode Stuffs!
+
+    let darkMode = false;
+    let rootStyle = getComputedStyle(document.body);
+    // for now, I'm making dark mode opt-in just because it's still not perfect
+    // if (
+    //   window.matchMedia('(prefers-color-scheme)').media !== 'not all'
+    //   && window.matchMedia('(prefers-color-scheme: dark)').matches
+    // ) {
+    //   colorLog('Welcome to the dark side (you prefer dark mode).');
+    //   toggleDarkMode();
+    // }
+    // else{
+    //   setDarkMode("light");
+    // }
+
+    function setDarkMode(newMode){
+      rootStyle = getComputedStyle(document.body);
+      document.documentElement.style.setProperty("--font-color-root", rootStyle.getPropertyValue(`--font-color-${newMode}-mode`));
+      document.documentElement.style.setProperty("--font-em-color-root", rootStyle.getPropertyValue(`--font-em-color-${newMode}-mode`));
+      document.documentElement.style.setProperty("--background-color-root", rootStyle.getPropertyValue(`--background-color-${newMode}-mode`));
+    }
+    function toggleDarkMode(){
+      if (darkMode) {
+        // switch to light
+        setDarkMode("light");
+      }
+      else{
+        // switch to dark
+        setDarkMode("dark");
+      }
+      darkMode = !darkMode;
+    }
+
+    // event listener for light/dark mode switch
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeMediaQuery.addListener((e) => {
+      const darkModeOn = e.matches;
+      console.log(`Dark was toggled to ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+      toggleDarkMode();
+    });
+
+    // these are the controllers for the expanding content boxes
+    // i use a method from https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/ , which bypasses some issues with just setting display:block;
+
+    function getHeight(elem) {
+      elem.style.display = 'block';
+      let height = elem.scrollHeight + 'px';
+      elem.style.display = '';
+      return height;
+    };
+
+    function show(elem) {
+      let height = getHeight(elem);
+      elem.classList.add('is-visible');
+      elem.style.height = height;
+
+      window.setTimeout(function () {
+        elem.style.height = '';
+      }, 350);
+    };
+
+    function hide(elem) {
+      elem.style.height = elem.scrollHeight + 'px';
+      window.setTimeout(function () {
+        elem.style.height = '0';
+      }, 1);
+      window.setTimeout(function () {
+        elem.classList.remove('is-visible');
+      }, 350);
+    };
+
+    function toggle(elem) {
+      if (elem.classList.contains('is-visible')) {
+        hide(elem);
+      } else {
+        show(elem);
+      }
+    };
+    // show/hide listeners
+    document.getElementById('audionotch-link').onclick = function () {
+      toggle(document.getElementById('audionotch-content'))
+    };
+    document.getElementById('aws-link').onclick = function () {
+      toggle(document.getElementById('aws-content'))
+    };
+    document.getElementById('booz-link').onclick = function () {
+      toggle(document.getElementById('booz-content'))
+    };
+    document.getElementById('link-em tla-link').onclick = function () {
+      toggle(document.getElementById('tla-content'))
+    };
+    document.getElementById('small-projects-link').onclick = function () {
+      toggle(document.getElementById('small-projects-content'))
+    };
+  </script>
 </body>
 
 </html>
